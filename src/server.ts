@@ -30,8 +30,8 @@ fastify.register(swaggerUI, {
   transformSpecificationClone: true,
 });
 
-fastify.register(userRoutes, { prefix: "/users" });
-fastify.register(productRoutes, { prefix: "/products" });
+fastify.register(userRoutes, { prefix: "/" });
+fastify.register(productRoutes, { prefix: "/" });
 
 fastify.setNotFoundHandler((request, reply) => {
   reply.status(404).send({

@@ -58,17 +58,19 @@ The server will start on `http://localhost:3000`.
 | Method | Endpoint | Description |
 |--------|---------|-------------|
 | `GET` | `/users` | Get all users |
-| `POST` | `/users/add` | Add a new user |
-| `POST` | `/users/delete/:id` | Delete a user |
-| `POST` | `/users/update/:id` | Update a user |
+| `POST` | `/users/add` | Add a new user (Requires `name`, `surname`, `email`, `password`, `age`, and optional `role`) |
+| `POST` | `/users/delete/:id` | Delete a user by ID |
+| `POST` | `/users/update/:id` | Update a user by ID |
+| `POST` | `/users/login` | Authenticate user (Requires `email` and `password`) |
 
 ### Product Routes (`/products`)
 | Method | Endpoint | Description |
 |--------|---------|-------------|
 | `GET` | `/products` | Get all products |
 | `POST` | `/products/add` | Add a new product |
-| `POST` | `/products/delete/:id` | Delete a product |
-| `POST` | `/products/update/:id` | Update a product |
+| `POST` | `/products/delete/:id` | Delete a product by ID |
+| `POST` | `/products/update/:id` | Update a product by ID |
+| `/products/update/:id` | Update a product |
 
 ---
 
@@ -82,7 +84,7 @@ http://localhost:3000/docs
 
 ## 🔜 Upcoming Features
 - ✅ User and Product Management  
-- 🔜 JWT Authentication & Role-based Access Control  
+- ✅ JWT Authentication & Role-based Access Control  
 - 🔜 Advanced Logging and Monitoring  
 
 ---
